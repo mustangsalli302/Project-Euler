@@ -1,0 +1,14 @@
+def fib(n)
+	n <= 1 ? n : fib(n-1) + fib(n-2)
+end
+array = []
+x = 2
+while fib(x) < 4_000_000
+	if fib(x) % 2 == 0 
+		array << fib(x)
+	end
+	x += 1
+end
+sum = 0
+array.each {|n| sum += n}
+puts sum

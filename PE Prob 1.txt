@@ -1,0 +1,9 @@
+sum = 0
+total = [ ]
+(1...1000).each do | x |
+	if (x%3 == 0 || x%5 == 0)
+		total << x
+	end
+end
+total.each {|x| sum += x}
+puts sum
